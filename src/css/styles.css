@@ -1,0 +1,681 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 150px 16px 150px;
+    background: #fff;
+    text-align: center;
+    /* position: sticky; */
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    /* margin-right: 20px; */
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #222;
+    /* flex: 1; */
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    flex: 0 1 auto;
+    /* padding-right: 360px; */
+}
+
+.user-name {
+    background: #eaf6ff;
+    color: #2196f3;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    /* margin-left: auto; */
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #2196f3;
+}
+
+
+
+/* Hero Section */
+.hero {
+    padding: 0 280px 0 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hero-left h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.15;
+}
+
+.hero-left h1 span,
+.hero-left h1 strong {
+    color: #2196f3;
+}
+
+.hero-left p {
+    font-size: 1.15rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+#bookServiceBtn {
+    height: 72px;
+    width: fit-content;
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+    transition: background 0.2s;
+}
+
+#bookServiceBtn:hover {
+    background: #1769aa;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right img {
+    width: 500px;
+    max-width: 180%;
+    /* border-radius: 18px; */
+    /* box-shadow: 0 4px 24px rgba(33,150,243,0.10); */
+    /* background: #eaf6ff; */
+    padding: 18px;
+}
+
+/* Service Overview / Achievements */
+.service-overview {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #36aaff;
+    color: #fff;
+    padding: 38px 0;
+    margin-top: 32px;
+}
+
+.achievements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.achievements > div {
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.achievements > div:not(:last-child) {
+    border-right: 2px solid #fff7;
+    padding-right: 48px;
+}
+
+.achievements > div:not(:first-child) {
+    padding-left: 48px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #eaf6ff;
+}
+
+.achievements > div:first-child {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        gap: 32px;
+        padding: 40px 16px 24px 16px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px 16px 10px 16px;
+    }
+    .achievements {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .achievements > div:not(:last-child),
+    .achievements > div:not(:first-child) {
+        border: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 6px 6px 6px;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+    .hero-right img {
+        width: 180px;
+        padding: 8px;
+    }
+    .service-overview {
+        padding: 18px 0;
+    }
+}
+
+
+/* --- Booking Section --- */
+.booking-section {
+    display: flex;
+    gap: 32px;
+    max-width: 1100px;
+    /* height: 100vh; */
+    margin: 78px auto 78px auto;
+    background: #f7fafd;
+    border-radius: 22px;
+    padding: 40px 32px;
+    box-shadow: 0 4px 24px rgba(33,150,243,0.06);
+}
+
+.booking-left, .booking-right {
+    flex: 1;
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px rgba(33,150,243,0.04);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.booking-left {
+    margin-right: 12px;
+}
+
+.booking-left h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.booking-left .subtext {
+    color: #7a8ca3;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.booking-left hr {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin-bottom: 18px;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 1.08rem;
+    gap: 8px;
+}
+
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-price {
+    color: #2196f3;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.add-btn, .remove-btn {
+    border: none;
+    border-radius: 18px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.add-btn {
+    background: #f3f8ff;
+    color: #2196f3;
+    border: 1px solid #b6e0ff;
+}
+
+.add-btn:hover {
+    background: #e3f1ff;
+}
+
+.remove-btn {
+    background: #fff0f3;
+    color: #f44336;
+    border: 1px solid #ffcdd2;
+}
+
+.remove-btn:hover {
+    background: #ffe6ea;
+}
+
+.info {
+    margin-top: 18px;
+    color: #2196f3;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Booking Right --- */
+.booking-right {
+    margin-left: 12px;
+    gap: 24px;
+}
+
+.cart-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(33,150,243,0.04);
+    padding: 20px 18px 12px 18px;
+    margin-bottom: 18px;
+}
+
+.cart-box h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+
+.cart-table th, .cart-table td {
+    text-align: left;
+    padding: 6px 8px;
+    font-size: 1rem;
+}
+
+.cart-table th {
+    color: #7a8ca3;
+    font-weight: 500;
+    background: #f7fafd;
+}
+
+.cart-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2196f3;
+    margin-top: 10px;
+    border-top: 1px solid #eaeaea;
+    padding-top: 10px;
+}
+
+.booknow-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(33,150,243,0.04);
+    padding: 20px 18px 18px 18px;
+}
+
+.booknow-box h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+#book-form label {
+    font-size: 0.98rem;
+    color: #222;
+    margin-bottom: 4px;
+    display: block;
+}
+
+#book-form input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    background: #f7fafd;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row > div {
+    flex: 1;
+}
+
+#bookNowBtn {
+    width: 100%;
+    background: #5a6bff;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#bookNowBtn:hover {
+    background: #3d4fd7;
+}
+
+.confirmation-msg {
+    margin-top: 12px;
+    color: #2196f3;
+    font-size: 1rem;
+    text-align: center;
+    min-height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .booking-section {
+        flex-direction: column;
+        padding: 24px 8px;
+    }
+    .booking-left, .booking-right {
+        margin: 0;
+        padding: 18px 8px;
+    }
+}
+
+
+/* --- Quality Description Section --- */
+.quality-section {
+    padding: 48px 0 60px 0;
+    background: #fff;
+
+}
+.quality-features {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.feature {
+    flex: 1;
+    text-align: center;
+    padding: 0 18px;
+}
+.feature-icon {
+
+    width: 220px;
+    height: 64px;
+    margin-bottom: 12px;
+    /* margin-right: 24px; */
+    display: flex;
+    align-items: center;
+}
+.feature h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
+}
+.feature p {
+    color: #7a8ca3;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    background: #36aaff;
+    padding: 48px 0;
+    color: #fff;
+}
+.newsletter-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.newsletter-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    flex: 1;
+    line-height: 1.1;
+}
+.newsletter-form {
+    padding: 36px;
+    display: flex;
+    gap: 12px;
+    flex: 2;
+}
+.newsletter-form input {
+    padding: 16px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    outline: none;
+    width: 180px;
+    color: #222;
+}
+.newsletter-form input[type="email"] {
+    min-width: 180px;
+}
+.newsletter-form button {
+    background: #fff;
+    color: #36aaff;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 38px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.newsletter-form button:hover {
+    background: #eaf6ff;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #f7fafd;
+    padding: 60px 0 60px 0;
+    color: #222;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.footer-logo {
+    flex: 1.2;
+}
+.footer-logo .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.footer-logo .about-us {
+    margin-top: 8px;
+}
+.footer-links {
+    flex: 1;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+.footer-links li {
+    margin-bottom: 6px;
+}
+.footer-links a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.footer-links a:hover {
+    color: #2196f3;
+}
+.footer-contact {
+    flex: 1;
+    margin-bottom: 12px;
+}
+.footer-social {
+    flex: 1;
+}
+.footer-social .social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(1);
+    transition: filter 0.2s;
+}
+.footer-social img:hover {
+    filter: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .quality-features,
+    .footer-top,
+    .newsletter-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    .feature {
+        text-align: left;
+        padding: 0 0 18px 0;
+    }
+    .newsletter-content h2 {
+        margin-bottom: 18px;
+    }
+    .newsletter-form {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social .social-icons a {
+    color: #222;
+    font-size: 1.7rem;
+    margin-right: 10px;
+    transition: color 0.2s;
+}
+.footer-social .social-icons a:hover {
+    color: #2196f3;
+}
+

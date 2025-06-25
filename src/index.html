@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Service App</title>
+    <!-- Add Font Awesome CDN in your <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="user-name">User's Name</div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <h1 style="color: rgb(83, 79, 79);">Revitalize Your </h1>
+            <h1 style="color: rgb(83, 79, 79);">Clothes With Expert</h1>
+            <h1 style="color: #2196f3;">Laundry Services</h1>
+            <br>
+            <p style="color: rgb(187, 187, 187);">Your satisfaction is our priority. Book a service today! <br>
+               From premium dry cleaning to quick wash-and-fold, we <br>
+               deliver care and convenience. Schedule a pickup and <br>
+               rediscover the freshness of your clothes today! <br>
+            </p>
+            <br>
+            <button id="bookServiceBtn">Book a Service Today!</button>
+            
+        </div>
+        <div class="hero-right">
+            <img src="assets/Washing.png" alt="Laundry Service">
+        </div>
+    </section>
+
+    <section class="service-overview">
+       
+<div class="achievements">
+    <div><span>Our Achievements</span></div>
+    <div>15+<span>Laundry Services</span></div>
+    <div>240+<span>Happy Customers</span></div>
+    <div>2+ Yrs<span>Experience</span></div>
+</div>
+<!-- ...existing code... -->
+    </section>
+
+
+
+
+
+    <section class="booking-section" id="booking-section">
+  <div class="booking-left">
+    <h2>Our Services</h2>
+    <p class="subtext">Click On The Add To Cart Button To Add The Services To Your Cart</p>
+    <hr>
+    <ul class="service-list" id="service-list">
+      <!-- Services will be rendered here by JS -->
+    </ul>
+    <div class="info">
+      <span>ℹ️ Add the items to the cart and book now</span>
+    </div>
+  </div>
+  <div class="booking-right">
+    <div class="cart-box">
+      <h3>Added Items</h3>
+      <table class="cart-table" id="cart-table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Service Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cart items will be rendered here by JS -->
+        </tbody>
+      </table>
+      <div class="total-amount">
+        <span>Total Amount</span>
+        <span id="total-amount">₹0.00</span>
+      </div>
+    </div>
+    <div class="booknow-box">
+      <h3>Book Now</h3>
+      <form id="book-form">
+        <label>Full Name</label>
+        <input type="text" id="fullName" placeholder="Saurabh" required>
+        <div class="form-row">
+          <div>
+            <label>Email ID</label>
+            <input type="email" id="email" placeholder="mailid@gmail.com" required>
+          </div>
+          <div>
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="0000000000" required>
+          </div>
+        </div>
+        <button type="submit" id="bookNowBtn">Book now</button>
+        <div id="confirmation-msg" class="confirmation-msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<section class="quality-section">
+  <div class="quality-features">
+    <div class="feature">
+      <div class="feature-icon" aria-label="Premium Services">🧺</div>
+      <h3>Premium Services</h3>
+      <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" aria-label="Quick Support"><i class="fa-solid fa-headset"></i></div>
+      <h3>Quick Support</h3>
+      <p>We’re committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" aria-label="Hassle Free Delivery"><i class="fa-solid fa-truck"></i></div>
+      <h3>Hassle Free Delivery</h3>
+      <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon" aria-label="Affordable Prices"><i class="fa-solid fa-handshake"></i></div>
+      <h3>Affordable Prices</h3>
+      <p>Experience exceptional care without breaking the bank – our affordable prices make laundry day stress-free.</p>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="newsletter-content">
+    <h2>Subscribe to our<br>newsletter.</h2>
+    <form class="newsletter-form">
+      <input type="text" placeholder="Full name" required>
+      <input type="email" placeholder="Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <div class="logo">Logo</div>
+      <div class="about-us">
+        <strong>About us</strong>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur. Sed At Congue.</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <strong>Important Links</strong>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <strong>Contact</strong>
+      <div>mail@site.com</div>
+      <div>+91 91234 56780</div>
+    </div>
+    <div class="footer-social">
+  <strong>Follow Us</strong>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+  </div>
+</footer>
+
+
+   
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+  })();
+</script>
+    <script src="js/main.js"></script>
+</body>
+</html>
