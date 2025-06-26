@@ -104,7 +104,7 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   // EmailJS integration
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+  emailjs.send('service_awy8tpa', 'template_qyltdzs', {
     to_name: name,
     to_email: email,
     phone: phone,
@@ -119,7 +119,7 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     renderCart();
   }, function(error) {
     document.getElementById('confirmation-msg').textContent =
-      "Email has been sent successfully.";
+      "There was an error sending your booking. Please try again later.";
   });
 
   setTimeout(function() {
