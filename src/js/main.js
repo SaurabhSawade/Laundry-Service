@@ -105,8 +105,8 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
 
   // EmailJS integration
   emailjs.send('service_awy8tpa', 'template_qyltdzs', {
-    to_name: name,
-    to_email: email,
+    name: name,
+    email: email,
     phone: phone,
     services: items,
     total: total
