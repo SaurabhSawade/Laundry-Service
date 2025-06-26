@@ -128,7 +128,7 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     renderServices();
     renderCart();
     document.getElementById('confirmation-msg').textContent = "";
-  }, 1000); // 1 second for user to see the confirmation message
+  }, 200); // 200 milliseconds for user to see the confirmation message
 
 });
 

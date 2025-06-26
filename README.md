@@ -1,7 +1,7 @@
 # Laundry Service Web Application
 
 ## Deploy Link
-https://luxury-bubblegum-eb6f38.netlify.app
+https://laundry-service-vzi5-osk7iydfy-saurabhsawades-projects.vercel.app
 
 ## Overview
 This project is a web application for a laundry service that provides users with an easy way to book laundry services online. The application features a responsive design, allowing users to navigate seamlessly across different devices.
